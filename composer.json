@@ -1,20 +1,21 @@
 {
-    "name":"son/mvc",
-    "require": {
+    "name":"birt/mvc",
+    "require": 
+    {
         "php":">=5.6"
     },
-    "authors":[
-        {
+    "authors": [
+    {
         "name":"Alberto Moreira Soares",
         "email":"oalberto@gmail.com"
-        }
-],
-    "autoload": { 
-            "psr-4":{
-                 "SON\\":"vendor/SON/ ",
-                 "APP\\":"App/"
-            }
-
     }
-
+    ],
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "BIRT\\":"vendor/BIRT/",
+            "App\\":"App/"
+        }
+    }
 }

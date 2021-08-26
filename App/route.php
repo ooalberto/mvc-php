@@ -16,13 +16,13 @@ class Route
     {
         $routes['home'] = array(
             'route' => '/',
-            'controller' => "indexController",
+            'controller' => "IndexController",
             'action' => 'index'
         );
 
         $routes['contact'] = array(
             'route' => '/contact',
-            'controller' => "indexController",
+            'controller' => "IndexController",
             'action' => 'contact'
         );
         $this->setRoutes($routes);
@@ -30,16 +30,15 @@ class Route
 
     public function run($url)
     {
-        array_walk($this->routes, function($route) use ($url){
-                if($url == $route['route'])
-                {
-                    $class = "App\\Controllers\\".ucfirst($route['controller']);
-                    $controller = new $class;
-                    $action = $route['action'];
-                    $controller->$action();
-                }
+        array_walk($this->routes, function ($route) use ($url) {
+            if ($url == $route['route']) {
+                $class = "App\\Controllers\\" . ucfirst($route['controller']);
+                // $class  ='teste';
+                $controller = new $class;
+                $action = $route['action'];
+                $controller->$action();
+            }
         });
-
     }
 
     public function setRoutes(array $routes)
@@ -49,7 +48,7 @@ class Route
 
     public function getUrl()
     {
-       # return 'testeasffs';
+        # return 'testeasffs';
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 }

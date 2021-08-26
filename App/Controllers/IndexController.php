@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class indexController
+class IndexController
 {
     public function index()
     {
@@ -13,5 +13,5 @@ class indexController
     {
         echo 'Route: Controller Contact';
     }
-    }
+    
 }

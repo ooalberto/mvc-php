@@ -6,12 +6,14 @@ class IndexController
 {
     public function index()
     {
-        echo 'Route: Controller Index';
+        $cars = array("Mustang","Ferrari");
+        include_once "../App/Views/index.phtml";
     }
 
     public function contact()
     {
-        echo 'Route: Controller Contact';
+        $cars = array("Mustang","Ferrari");
+        include_once "../App/Views/index.phtml";
     }
     
 }

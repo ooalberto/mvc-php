@@ -2,17 +2,11 @@
 
 namespace App\Models;
 
-class Contact
-{
-    protected $db;
+use BIRT\Model\Table;
 
-    public function __construct(\PDO $db)
-    {
-        $this->db = $db;
-    }
-    public function fetchAll()
-    {
-        $query = "select * from contacts";
-        return $this->db->query($query);
-    }
+class Contact extends Table
+{
+
+  protected $table = 'contacts';
+
 }

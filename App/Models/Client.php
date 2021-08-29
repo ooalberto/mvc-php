@@ -2,17 +2,9 @@
 
 namespace App\Models;
 
-class Client
-{
-    protected $db;
+use BIRT\Model\Table;
 
-    public function __construct(\PDO $db)
-    {
-        $this->db = $db;
-    }
-    public function fetchAll()
-    {
-        $query = "select * from clients";
-        return $this->db->query($query);
-    }
+class Client extends Table
+{
+    protected $table = "Clients";
 }

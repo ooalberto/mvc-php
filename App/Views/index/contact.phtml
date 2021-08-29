@@ -1,8 +1,8 @@
 Route /  Controller: IndexController Action:index View: contact.phtml
 
-<?php foreach ($this->views->contacts as $contact) : ?>
-    <p> <?=$contact['nome']?></p>
-    <p> <?=$contact['tel']?></p>
+
+    <p> <?=$this->views->contacts['nome']?></p>
+    <p> <?=$this->views->contacts['tel']?></p>
     <hr>
-<?php endforeach; ?>
+
 

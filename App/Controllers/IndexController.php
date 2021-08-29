@@ -29,7 +29,7 @@ class IndexController extends Action
         // $contact = new Contact(Conn::getDb());
         // $this->views->contacts = $contact->fetchAll();
         $contact =  Container::getModel("Contact");
-        $this->views->contacts = $contact->fetchAll();
+        $this->views->contacts = $contact->find(2);
         $this->render("contact");
     }
 }

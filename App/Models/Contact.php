@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Client
+class Contact
 {
     protected $db;
 
@@ -12,7 +12,7 @@ class Client
     }
     public function fetchAll()
     {
-        $query = "select * from clients";
+        $query = "select * from contacts";
         return $this->db->query($query);
     }
 }

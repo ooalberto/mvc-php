@@ -1,10 +1,8 @@
 Route / Controller: IndexController Action:index View: index.phtml
 
 <?php foreach ($this->views->clients as $client) : ?>
-
-
-    <p>teste <?=$client["nome"];?></p>
-    <p> <?=$client["email"];?></p>
+    <p> <?= $client["nome"]; ?></p>
+    <p> <?= $client["email"]; ?></p>
     <hr>
 
-    <?php endforeach; ?>
+<?php endforeach; ?>
